@@ -1,4 +1,6 @@
 import os
+import json
+import re
 from dotenv import load_dotenv
 from deepeval.metrics import (
     AnswerRelevancyMetric,
@@ -21,9 +23,13 @@ class GeminiEvalModel(DeepEvalBaseLLM):
     def generate(self, prompt: str) -> str:
         response = self.client.models.generate_content(
             model="gemini-2.0-flash",
-            contents=prompt
+            contents=prompt + "\n\nIMPORTANT: Return only valid JSON. No markdown, no backticks, no explanation."
         )
-        return response.text.strip()
+        text = response.text.strip()
+        # strip markdown code fences if present
+        if text.startswith("```"):
+            text = re.sub(r"```(?:json)?", "", text).replace("```", "").strip()
+        return text
 
     async def a_generate(self, prompt: str) -> str:
         return self.generate(prompt)
