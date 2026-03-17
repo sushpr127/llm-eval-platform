@@ -1,0 +1,246 @@
+{
+  "test_id": "85d8ea74-9b3f-4d61-9b9e-57d9ca16628a",
+  "model_a": "gemini-2.0-flash",
+  "model_b": "llama-3.1-8b-instant",
+  "results": {
+    "financial_analysis": {
+      "faithfulness": {
+        "gemini-2.0-flash": {
+          "mean": 0.99,
+          "ci_95": [
+            0.97,
+            1.0
+          ]
+        },
+        "llama-3.1-8b-instant": {
+          "mean": 1.0,
+          "ci_95": [
+            1.0,
+            1.0
+          ]
+        },
+        "p_value": 0.3421,
+        "significant": false,
+        "winner": "tie (not significant)"
+      },
+      "answer_relevancy": {
+        "gemini-2.0-flash": {
+          "mean": 0.9057,
+          "ci_95": [
+            0.8357,
+            0.9675
+          ]
+        },
+        "llama-3.1-8b-instant": {
+          "mean": 0.985,
+          "ci_95": [
+            0.9671,
+            1.0
+          ]
+        },
+        "p_value": 0.1544,
+        "significant": false,
+        "winner": "tie (not significant)"
+      },
+      "hallucination_rate": {
+        "gemini-2.0-flash": {
+          "mean": 0.0,
+          "ci_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "llama-3.1-8b-instant": {
+          "mean": 0.0,
+          "ci_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "p_value": 1.0,
+        "significant": false,
+        "winner": "tie (not significant)"
+      },
+      "toxicity": {
+        "gemini-2.0-flash": {
+          "mean": 0.0,
+          "ci_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "llama-3.1-8b-instant": {
+          "mean": 0.0,
+          "ci_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "p_value": 1.0,
+        "significant": false,
+        "winner": "tie (not significant)"
+      }
+    },
+    "technical_documentation": {
+      "faithfulness": {
+        "gemini-2.0-flash": {
+          "mean": 1.0,
+          "ci_95": [
+            1.0,
+            1.0
+          ]
+        },
+        "llama-3.1-8b-instant": {
+          "mean": 0.9979,
+          "ci_95": [
+            0.9937,
+            1.0
+          ]
+        },
+        "p_value": 0.3421,
+        "significant": false,
+        "winner": "tie (not significant)"
+      },
+      "answer_relevancy": {
+        "gemini-2.0-flash": {
+          "mean": 0.9889,
+          "ci_95": [
+            0.9667,
+            1.0
+          ]
+        },
+        "llama-3.1-8b-instant": {
+          "mean": 0.9975,
+          "ci_95": [
+            0.9925,
+            1.0
+          ]
+        },
+        "p_value": 1.0,
+        "significant": false,
+        "winner": "tie (not significant)"
+      },
+      "hallucination_rate": {
+        "gemini-2.0-flash": {
+          "mean": 0.0,
+          "ci_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "llama-3.1-8b-instant": {
+          "mean": 0.0,
+          "ci_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "p_value": 1.0,
+        "significant": false,
+        "winner": "tie (not significant)"
+      },
+      "toxicity": {
+        "gemini-2.0-flash": {
+          "mean": 0.0,
+          "ci_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "llama-3.1-8b-instant": {
+          "mean": 0.0,
+          "ci_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "p_value": 1.0,
+        "significant": false,
+        "winner": "tie (not significant)"
+      }
+    },
+    "customer_support": {
+      "faithfulness": {
+        "gemini-2.0-flash": {
+          "mean": 0.975,
+          "ci_95": [
+            0.925,
+            1.0
+          ]
+        },
+        "llama-3.1-8b-instant": {
+          "mean": 1.0,
+          "ci_95": [
+            1.0,
+            1.0
+          ]
+        },
+        "p_value": 0.3421,
+        "significant": false,
+        "winner": "tie (not significant)"
+      },
+      "answer_relevancy": {
+        "gemini-2.0-flash": {
+          "mean": 0.8779,
+          "ci_95": [
+            0.7792,
+            0.9526
+          ]
+        },
+        "llama-3.1-8b-instant": {
+          "mean": 0.9797,
+          "ci_95": [
+            0.9445,
+            1.0
+          ]
+        },
+        "p_value": 0.0819,
+        "significant": false,
+        "winner": "tie (not significant)"
+      },
+      "hallucination_rate": {
+        "gemini-2.0-flash": {
+          "mean": 0.0,
+          "ci_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "llama-3.1-8b-instant": {
+          "mean": 0.0,
+          "ci_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "p_value": 1.0,
+        "significant": false,
+        "winner": "tie (not significant)"
+      },
+      "toxicity": {
+        "gemini-2.0-flash": {
+          "mean": 0.0,
+          "ci_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "llama-3.1-8b-instant": {
+          "mean": 0.0,
+          "ci_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "p_value": 1.0,
+        "significant": false,
+        "winner": "tie (not significant)"
+      }
+    }
+  },
+  "overall_wins": {
+    "gemini-2.0-flash": 0,
+    "llama-3.1-8b-instant": 0,
+    "tie (not significant)": 12
+  }
+}

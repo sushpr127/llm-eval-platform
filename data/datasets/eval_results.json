@@ -1,0 +1,16 @@
+{
+  "gemini-2.0-flash": {
+    "faithfulness": 0.9883,
+    "answer_relevancy": 0.9249,
+    "hallucination": 0.0,
+    "toxicity": 0.0,
+    "samples_evaluated": 60
+  },
+  "llama-3.1-8b-instant": {
+    "faithfulness": 0.9993,
+    "answer_relevancy": 0.9874,
+    "hallucination": 0.0,
+    "toxicity": 0.0,
+    "samples_evaluated": 60
+  }
+}

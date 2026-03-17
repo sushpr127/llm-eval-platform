@@ -1,0 +1,18 @@
+[
+  {
+    "model": "gemini-2.0-flash",
+    "faithfulness": 0.9883,
+    "hallucination_rate": 0.0,
+    "faithfulness_check": "PASS",
+    "hallucination_check": "PASS",
+    "overall": "PASS"
+  },
+  {
+    "model": "llama-3.1-8b-instant",
+    "faithfulness": 0.9993,
+    "hallucination_rate": 0.0,
+    "faithfulness_check": "PASS",
+    "hallucination_check": "PASS",
+    "overall": "PASS"
+  }
+]
