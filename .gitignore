@@ -11,3 +11,6 @@ analytics/dbt/logs/
 analytics/dbt/.user.yml
 dashboard/node_modules/
 *.log
+data/datasets/*.jsonl
+data/datasets/*.json
+data/datasets/*.csv
