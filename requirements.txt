@@ -1,0 +1,27 @@
+# Eval frameworks
+ragas
+deepeval
+
+# LLM SDKs
+google-genai
+groq
+langchain-google-genai
+langsmith
+
+# API
+fastapi
+uvicorn
+
+# Database
+psycopg2-binary
+sqlalchemy
+
+# Data
+pandas
+numpy
+scipy
+
+# Utilities
+python-dotenv
+pydantic
+tqdm
