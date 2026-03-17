@@ -1,0 +1,60 @@
+name: LLM Eval CI Gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  eval-gate:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_DB: eval_db
+          POSTGRES_USER: eval_user
+          POSTGRES_PASSWORD: eval_pass
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Init database schema
+        env:
+          PGPASSWORD: eval_pass
+        run: |
+          psql -h localhost -U eval_user -d eval_db -f analytics/dbt/init.sql
+
+      - name: Run CI eval gate
+        env:
+          POSTGRES_HOST: localhost
+          POSTGRES_PORT: 5432
+          POSTGRES_DB: eval_db
+          POSTGRES_USER: eval_user
+          POSTGRES_PASSWORD: eval_pass
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          LANGCHAIN_API_KEY: ${{ secrets.LANGCHAIN_API_KEY }}
+          LANGCHAIN_TRACING_V2: "true"
+          LANGCHAIN_PROJECT: llm-eval-platform
+          MIN_FAITHFULNESS: "0.7"
+          MAX_HALLUCINATION_RATE: "0.2"
+        run: python3 -m eval.ci_eval
