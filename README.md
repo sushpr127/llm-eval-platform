@@ -8,6 +8,10 @@ Built as a portfolio project demonstrating LLM evaluation engineering, statistic
 
 ## Live Demo
 
+![Dashboard Preview](docs/dashboard_preview1.png)
+![Dashboard Preview](docs/dashboard_preview2.png)
+
+
 > Run locally — see setup below
 
 ---
